@@ -106,157 +106,55 @@ Protocolos de Segurança: Exige o uso obrigatório de protocolos criptográficos
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Caso de teste 
-Caso de Teste 01 – Cadastro de Usuário
-Objetivo: Verificar se o usuário consegue se cadastrar.
-Passos:
-1.	Acessar a tela de cadastro. 
-2.	Informar nome, e-mail, senha, telefone e endereço. 
-3.	Clicar em "Cadastrar". 
-Resultado Esperado:
-•	Usuário cadastrado com sucesso. 
-•	Mensagem de confirmação exibida. 
-•	Dados salvos no sistema. 
-________________________________________
-Caso de Teste 02 – Cadastro com E-mail Duplicado
-Objetivo: Verificar se o sistema impede cadastro de e-mail já existente.
-Passos:
-1.	Cadastrar um usuário. 
-2.	Tentar cadastrar outro usuário usando o mesmo e-mail. 
-Resultado Esperado:
-•	Cadastro não realizado. 
-•	Mensagem informando que o e-mail já está cadastrado. 
-________________________________________
-Caso de Teste 03 – Senha Inválida
-Objetivo: Verificar validação de senha.
-Passos:
-1.	Preencher o cadastro com senha menor que 6 caracteres. 
-2.	Clicar em "Cadastrar". 
-Resultado Esperado:
-•	Cadastro não realizado. 
-•	Mensagem informando que a senha deve possuir no mínimo 6 caracteres. 
-________________________________________
-Caso de Teste 04 – Login Válido
-Objetivo: Verificar autenticação do usuário.
-Passos:
-1.	Informar e-mail e senha corretos. 
-2.	Clicar em "Entrar". 
-Resultado Esperado:
-•	Usuário autenticado. 
-•	Redirecionamento para Dashboard. 
-________________________________________
-Caso de Teste 05 – Login Inválido
-Objetivo: Verificar autenticação com credenciais incorretas.
-Passos:
-1.	Informar e-mail ou senha incorretos. 
-2.	Clicar em "Entrar". 
-Resultado Esperado:
-•	Login recusado. 
-•	Mensagem de erro exibida. 
-________________________________________
-Caso de Teste 06 – Cadastro de Pet
-Objetivo: Verificar cadastro de animal.
-Passos:
-1.	Acessar a tela de Pets. 
-2.	Clicar em "Novo Pet". 
-3.	Informar os dados solicitados. 
-4.	Salvar. 
-Resultado Esperado:
-•	Pet cadastrado com sucesso. 
-•	Pet exibido na lista. 
-________________________________________
-Caso de Teste 07 – Edição de Pet
-Objetivo: Verificar atualização dos dados do pet.
-Passos:
-1.	Selecionar um pet existente. 
-2.	Clicar em "Editar". 
-3.	Alterar informações. 
-4.	Salvar. 
-Resultado Esperado:
-•	Dados atualizados corretamente. 
-________________________________________
-Caso de Teste 08 – Exclusão de Pet
-Objetivo: Verificar remoção de pet.
-Passos:
-1.	Selecionar um pet. 
-2.	Clicar em "Excluir". 
-3.	Confirmar exclusão. 
-Resultado Esperado:
-•	Pet removido da lista. 
-•	Histórico de saúde e banhos associado removido. 
-________________________________________
-Caso de Teste 09 – Registro de Saúde
-Objetivo: Verificar cadastro de informações de saúde.
-Passos:
-1.	Selecionar um pet. 
-2.	Abrir a tela de saúde. 
-3.	Informar vacinas, alergias, doenças e medicamentos. 
-4.	Salvar. 
-Resultado Esperado:
-•	Informações registradas corretamente. 
-________________________________________
-Caso de Teste 10 – Agendamento de Banho
-Objetivo: Verificar agendamento de banho.
-Passos:
-1.	Selecionar um pet. 
-2.	Escolher data e horário disponíveis. 
-3.	Informar observações. 
-4.	Confirmar agendamento. 
-Resultado Esperado:
-•	Agendamento registrado. 
-•	Mensagem de sucesso exibida. 
-________________________________________
-Caso de Teste 11 – Agendamento sem Seleção de Horário
-Objetivo: Verificar validação do agendamento.
-Passos:
-1.	Selecionar um pet. 
-2.	Não selecionar horário. 
-3.	Clicar em "Confirmar". 
-Resultado Esperado:
-•	Agendamento não realizado. 
-•	Mensagem solicitando seleção de horário. 
-________________________________________
-Caso de Teste 12 – Histórico de Banhos
-Objetivo: Verificar exibição do histórico.
-Passos:
-1.	Realizar um agendamento. 
-2.	Acessar a tela de histórico. 
-Resultado Esperado:
-•	Registro exibido com pet, data, horário e observações. 
-________________________________________
-Caso de Teste 13 – Exclusão de Registro de Banho
-Objetivo: Verificar remoção do histórico.
-Passos:
-1.	Acessar o histórico. 
-2.	Selecionar um registro. 
-3.	Clicar em "Excluir". 
-Resultado Esperado:
-•	Registro removido do sistema. 
-________________________________________
-Caso de Teste 14 – Encerramento de Sessão
-Objetivo: Verificar logout.
-Passos:
-1.	Estar autenticado. 
-2.	Clicar em "Sair". 
-Resultado Esperado:
-•	Sessão encerrada. 
-•	Redirecionamento para a tela de login. 
-________________________________________
-Caso de Teste 15 – Acesso sem Login
-Objetivo: Verificar proteção das páginas.
-Passos:
-1.	Acessar diretamente Dashboard, Pets ou Histórico sem login. 
-Resultado Esperado:
+Caso de Teste 01 – Cadastro de Usuário Objetivo: Verificar se o usuário consegue se cadastrar. Passos:
+
+Acessar a tela de cadastro.
+Informar nome, e-mail, senha, telefone e endereço.
+Clicar em "Cadastrar". Resultado Esperado: • Usuário cadastrado com sucesso. • Mensagem de confirmação exibida. • Dados salvos no sistema.
+Caso de Teste 02 – Cadastro com E-mail Duplicado Objetivo: Verificar se o sistema impede cadastro de e-mail já existente. Passos:
+
+Cadastrar um usuário.
+Tentar cadastrar outro usuário usando o mesmo e-mail. Resultado Esperado: • Cadastro não realizado. • Mensagem informando que o e-mail já está cadastrado.
+Caso de Teste 03 – Senha Inválida Objetivo: Verificar validação de senha. Passos:
+
+Preencher o cadastro com senha menor que 6 caracteres.
+Clicar em "Cadastrar". Resultado Esperado: • Cadastro não realizado. • Mensagem informando que a senha deve possuir no mínimo 6 caracteres.
+Caso de Teste 04 – Login Válido Objetivo: Verificar autenticação do usuário. Passos:
+
+Informar e-mail e senha corretos.
+Clicar em "Entrar". Resultado Esperado: • Usuário autenticado. • Redirecionamento para Dashboard.
+Caso de Teste 05 – Login Inválido Objetivo: Verificar autenticação com credenciais incorretas. Passos:
+
+Informar e-mail ou senha incorretos.
+Clicar em "Entrar". Resultado Esperado: • Login recusado. • Mensagem de erro exibida.
+Caso de Teste 06 – Cadastro de Pet Objetivo: Verificar cadastro de animal. Passos:
+
+Acessar a tela de Pets.
+Clicar em "Novo Pet".
+Informar os dados solicitados.
+Salvar. Resultado Esperado: • Pet cadastrado com sucesso. • Pet exibido na lista.
+Caso de Teste 07 – Edição de Pet Objetivo: Verificar atualização dos dados do pet. Passos:
+
+Selecionar um pet existente.
+Clicar em "Editar".
+Alterar informações.
+Caso de Teste 08 – Exclusão de Pet Objetivo: Verificar remoção de pet. Passos:
+
+Selecionar um pet.
+Clicar em "Excluir".
+Confirmar exclusão. Resultado Esperado: • Pet removido da lista. • Histórico de saúde e banhos associado removido.
+Salvar. Resultado Esperado: • Dados atualizados corretamente.
+
+
+
+
+
+
+
+
+
+
+
+
 •	Usuário redirecionado para a tela de login.
