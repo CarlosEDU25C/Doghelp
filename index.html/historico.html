@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DogHelp · Histórico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__interno">
+    <div class="marca">
+      <span class="azul">Dog</span><span class="vermelho">Help</span>
+    </div>
+    <nav class="nav-principal">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pets.html">Meus Pets</a>
+      <a href="agendamento.html">Agendar</a>
+      <a href="historico.html" class="ativo">Histórico</a>
+    </nav>
+    <div class="topbar__usuario">
+      <span>Olá, <strong id="nomeUsuario">...</strong></span>
+      <button class="btn-sair" id="btnSair">Sair</button>
+    </div>
+  </div>
+</header>
+
+<main class="pagina">
+  <header class="cabecalho-pagina">
+    <div>
+      <h1><span class="titulo-destaque">Histórico de banhos</span></h1>
+      <span class="descricao">Todos os registros de banhos e serviços realizados.</span>
+    </div>
+  </header>
+
+  <div class="bloco">
+    <div class="tabela-wrap">
+      <table class="tabela-dados">
+        <thead>
+          <tr>
+            <th>Pet</th>
+            <th>Data do banho</th>
+            <th>Próximo banho</th>
+            <th>Status</th>
+            <th class="col-obs">Observações</th>
+            <th class="col-acoes">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpoHistorico">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/historico.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DogHelp · Meus Pets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__interno">
+    <div class="marca">
+      <span class="azul">Dog</span><span class="vermelho">Help</span>
+    </div>
+    <nav class="nav-principal">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pets.html" class="ativo">Meus Pets</a>
+      <a href="agendamento.html">Agendar</a>
+      <a href="historico.html">Histórico</a>
+    </nav>
+    <div class="topbar__usuario">
+      <span>Olá, <strong id="nomeUsuario">...</strong></span>
+      <button class="btn-sair" id="btnSair">Sair</button>
+    </div>
+  </div>
+</header>
+
+<main class="pagina">
+  <header class="cabecalho-pagina">
+    <div>
+      <h1><span class="titulo-destaque">Meus pets</span></h1>
+      <span class="descricao">Cadastre, edite ou remova os animais e gerencie a saúde.</span>
+    </div>
+    <button class="btn btn-blue" id="btnNovoPet">Novo pet</button>
+  </header>
+
+  <div class="grade-fichas" id="listaPets">
+  </div>
+</main>
+
+<!-- Modal PET -->
+<div class="sobreposicao" id="modalPet">
+  <div class="modal">
+    <div class="modal__cabecalho">
+      <h2 id="modalTituloPet">Novo pet</h2>
+      <button class="modal__fechar" id="fecharModalPet">&times;</button>
+    </div>
+    <form id="formPet">
+      <input type="hidden" id="petId">
+
+      <div class="campo">
+        <label for="petNome">Nome do pet *</label>
+        <input type="text" id="petNome" required placeholder="Ex: Thor">
+      </div>
+
+      <div class="campo">
+        <label for="petEspecie">Espécie *</label>
+        <select id="petEspecie">
+          <option value="Cachorro">Cachorro</option>
+          <option value="Gato">Gato</option>
+          <option value="Ave">Ave</option>
+          <option value="Réptil">Réptil</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="petRaca">Raça</label>
+        <input type="text" id="petRaca" placeholder="Ex: Golden Retriever">
+      </div>
+
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="petSexo">Sexo</label>
+          <select id="petSexo">
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="petIdade">Idade (anos)</label>
+          <input type="number" id="petIdade" placeholder="Ex: 3">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="petPeso">Peso (kg)</label>
+        <input type="number" id="petPeso" placeholder="Ex: 25.5" step="0.1">
+      </div>
+
+      <button class="btn btn-blue" type="submit">Salvar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal SAÚDE -->
+<div class="sobreposicao" id="modalSaude">
+  <div class="modal">
+    <div class="modal__cabecalho">
+      <h2>Informações de Saúde</h2>
+      <button class="modal__fechar" id="fecharModalSaude">&times;</button>
+    </div>
+    <form id="formSaude">
+      <input type="hidden" id="saudePetId">
+
+      <div style="margin-bottom:1rem;">
+        <span style="color:var(--text-secondary);">Pet: <strong id="saudePetNome" style="color:var(--text-primary);"></strong></span>
+      </div>
+
+      <div class="campo">
+        <label for="saudeVacinas">Vacinas</label>
+        <textarea id="saudeVacinas" placeholder="Ex: Raiva (15/06/2024), V10 (10/05/2024)"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="saudeDoencas">Doenças conhecidas</label>
+        <textarea id="saudeDoencas" placeholder="Ex: Dermatite alérgica"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="saudeAlergias">Alergias</label>
+        <textarea id="saudeAlergias" placeholder="Ex: Frango, ácaro"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="saudeMedicamentos">Medicamentos em uso</label>
+        <textarea id="saudeMedicamentos" placeholder="Ex: Antialérgico (20mg/dia)"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="saudeCheckup">Último check-up veterinário</label>
+        <input type="text" id="saudeCheckup" placeholder="Ex: 10/05/2024 - Dr. Silva">
+      </div>
+
+      <button class="btn btn-blue" type="submit">Salvar informações</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/pets.js"></script>
+</body>
+</html>
